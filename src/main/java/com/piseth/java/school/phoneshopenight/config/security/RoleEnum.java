@@ -12,7 +12,7 @@ import lombok.Getter;
 import static com.piseth.java.school.phoneshopenight.config.security.PermissionEnum.*;
 
 @Getter
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 public enum RoleEnum {
 	ADMIN(Set.of(BRAND_WRITE, BRAND_READ, MODEL_WRITE, MODEL_READ)),
 	SALE(Set.of(BRAND_READ, MODEL_READ)),
