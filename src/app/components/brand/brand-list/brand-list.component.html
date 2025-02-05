@@ -1,9 +1,12 @@
 <div class="row">
     <div class="col-12 col-lg-12 col-xxl-12 d-flex">
+        <button (click)="goToBrandForm()">new Brand</button>
+    </div>
+    <div class="col-12 col-lg-12 col-xxl-12 d-flex">
         <div class="card flex-fill">
             <div class="card-header">
 
-                <h5 class="card-title mb-0">Latest Projects</h5>
+                <h5 class="card-title mb-0">Brand List</h5>
             </div>
             <table class="table table-hover my-0">
                 <thead>
@@ -17,7 +20,7 @@
                     <tr *ngFor="let brand of brands">
                         <td>{{brand.id}}</td>
                         <td class="d-none d-xl-table-cell">{{brand.name}}</td>                        
-                        <td><a href="#">Edit</a>|<a href="#">Delete</a></td>
+                        <td><button class="btn btn-primary btn-sm" (click)="edit(brand.id)">Edit</button>|<button class="btn btn-danger btn-sm">Delete</button></td>
                         
                     </tr>                    
                 </tbody>

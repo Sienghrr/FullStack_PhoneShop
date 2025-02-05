@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BrandComponent } from './brand.component';
+import { BrandFormComponent } from './brand-form.component';
 
-describe('BrandComponent', () => {
-  let component: BrandComponent;
-  let fixture: ComponentFixture<BrandComponent>;
+describe('BrandFormComponent', () => {
+  let component: BrandFormComponent;
+  let fixture: ComponentFixture<BrandFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BrandComponent]
+      declarations: [BrandFormComponent]
     });
-    fixture = TestBed.createComponent(BrandComponent);
+    fixture = TestBed.createComponent(BrandFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
