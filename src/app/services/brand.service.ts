@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -19,4 +19,7 @@ export class BrandService {
     return this.http.post(this.url + "brands", brand );
   }
 
+  getBrandList(brandParam : HttpParams): Observable<any>{
+    return this.http.get<any[]>(this.url + "brands",{params:brandParam});
+}
 }
