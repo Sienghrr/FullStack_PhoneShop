@@ -1,5 +1,5 @@
 
-	<div class="wrapper">
+	<div class="wrapper" *ngIf="isLoggedIn ; else elseBlock" >
 		<app-sidebar></app-sidebar>
 
 		<div class="main">
@@ -21,4 +21,7 @@
 			<app-footer></app-footer>
 		</div>
 	</div>
+	<ng-template #elseBlock>
+        <app-login (loginEvent)="switchView($event)"></app-login>
+    </ng-template>
 
